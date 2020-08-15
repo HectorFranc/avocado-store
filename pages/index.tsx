@@ -1,4 +1,7 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import Layout from '@components/Layout/Layout'
+import KawaiiHeader from '@components/KawaiiHeader/KawaiiHeader'
+import ProductList from '@components/ProductList/ProductList'
 
 const HomePage = () => {
   const [productList, setProductList] = useState<TProduct[]>([])
@@ -6,18 +9,17 @@ const HomePage = () => {
   useEffect(() => {
     window
       .fetch('/api/avo')
-      .then((data) => data.json())
-      .then(({ data }) => setProductList(data))
+      .then((response) => response.json())
+      .then(({ data }: TAPIAvoResponse) => {
+        setProductList(data)
+      })
   }, [])
 
   return (
-    <div>
-      <div>Next.js!</div>
-
-      {productList.map((product) => (
-        <p>{product.name}</p>
-      ))}
-    </div>
+    <Layout>
+      <KawaiiHeader />
+      <ProductList products={productList} />
+    </Layout>
   )
 }
 
