@@ -1,0 +1,27 @@
+{
+  "name": "avocado-store",
+  "version": "1.0.0",
+  "description": "Tienda ficticia de aguacates creada con NextJs y TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HectorFranc/avocado-store.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HectorFranc/avocado-store/issues"
+  },
+  "homepage": "https://github.com/HectorFranc/avocado-store#readme",
+  "dependencies": {
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
