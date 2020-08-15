@@ -2,6 +2,8 @@
 
 Tienda ficticia de aguacates creada con NextJs y TypeScript.
 
+**Live Preview**: https://avocado-store.vercel.app/
+
 ## ¿Quieres probarlo?
 
 Instala dependencias:
