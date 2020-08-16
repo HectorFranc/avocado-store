@@ -1,8 +1,13 @@
-import { AppProps } from 'next/app'
+import { AppProps, NextWebVitalsMetric } from 'next/app'
+
 import 'semantic-ui-css/semantic.min.css'
 import '../global.css'
 
 import CartProvider from '@store/Cart'
+
+export function reportWebVitals(metric: NextWebVitalsMetric) {
+  console.log(metric)
+}
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   // Aditional props
